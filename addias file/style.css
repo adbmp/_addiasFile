@@ -1,0 +1,983 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+a, h1, span, p, span{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    margin:0;
+    position: relative;
+    top: -25px;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 0;
+    transition: opacity 1s;
+
+    background: linear-gradient(231deg, #1a001a, #7300ff, #1a001a, #7300ff);
+    background-size: 800% 800%;
+
+    -webkit-animation: gradiente 30s ease infinite;
+    -moz-animation: gradiente 30s ease infinite;
+    animation: gradiente 30s ease infinite;
+}
+
+#textCirc{
+display: block;
+position: absolute;
+z-index: 10;
+top: 0;
+left: 0;
+font-size: 14px;
+font-weight: normal;
+opacity: 0;
+transition: opacity 0.5s;
+}
+
+@keyframes rot{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+            transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes gradiente {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes gradiente {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes gradiente {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+
+.move{
+    transition: fill 0.5s;
+}
+
+/* Imagens de fundo */
+.BackI{
+    position: absolute;
+    top: -5%;
+    left:0%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s; 
+    width: 100%;
+}
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 0.3}
+}
+
+/* Outras páginas */
+
+header > h1{
+    width: 10%;
+    position: relative;
+    left: 2%;
+    top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size:2.3vw;
+}
+
+header > a{
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+header > a:nth-of-type(1){
+margin-right: 3%;
+}
+
+
+/* Página inicial - Sobre Mim - Pessoal  */
+
+#page1 p:nth-child(1), #rol{
+    font-size: 1.8vw;
+    position: absolute;
+    left: 30%;
+    top: 9.5%;
+}
+
+
+#container {
+    height: 4%;
+    overflow: hidden;
+    position: absolute;
+    left: 39%;
+    top: 13.5%;
+}
+
+#rol{
+    position: relative;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    animation: slide 7s infinite;
+}
+
+@keyframes slide {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -1.2em;
+    }
+    75% {
+      top: -2.3em;
+    }
+  }
+
+#page1 > main > p:nth-child(3){
+    font-size: 14px;
+    width: 40%;
+    position: absolute;
+    top: 29.3%;
+    left:30%;
+}
+
+#page1 > main > p:nth-child(4){
+    font-size: 14px;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left:30%;
+}
+
+#page1 > main > p:nth-child(5){
+    font-size: 14px;
+    width: 40%;
+    position: absolute;
+    top: 70%;
+    left:30%;
+}
+
+#page1 > main > img:nth-child(6){
+    position:absolute;
+    top: 30.5%;
+    left:22%;
+    transition: 0.3s;
+}
+
+#page1 > main > img:nth-child(7){
+    position:absolute;
+    top: 71%;
+    left:23%;
+    transition: 0.3s;
+}
+
+#page1 > main > img:nth-child(8){
+    position:absolute;
+    top: 50%;
+    right:22%;
+    transition: 0.3s;
+}
+
+#imgHover{
+    display: none;
+    width: 25%;
+    height: 15%;
+    position: absolute;
+    top:45%;
+    right: -4%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+#imgHover > img:nth-child(1){
+    position: absolute;
+    top:20%;
+    left:20%;
+}
+
+#imgHover > img:nth-child(2){
+    position: absolute;
+    top:10%;
+    right:78%;
+}
+
+#imgHover > img:nth-child(3){
+    position: absolute;
+    top:-30%;
+    left:40%;
+    z-index: -1;
+}
+
+#imgHover > img:nth-child(4){
+    position: absolute;
+    top:50%;
+    left:40%;
+    z-index: -1;
+} 
+
+#imgHover > img:nth-child(5){
+    position: relative;
+    top:-80px;
+    left:20%;
+    z-index: -0.5;
+}
+
+#page1 > main > img:nth-child(8):hover + #imgHover{
+    display: block;
+}
+
+#page1 > main > img:nth-child(6):hover, #page1 > main > img:nth-child(7):hover, #page1 > main > img:nth-child(8):hover, footer > a img:hover, header > a:hover, .close:hover,  footer > a:nth-child(5):hover{
+    filter: invert(50%) 
+    sepia(100%) 
+    saturate(100%) 
+    hue-rotate(210deg) 
+    brightness(80%) 
+    contrast(200%);
+}
+
+#page1 > main > img:nth-child(7):hover{
+    transition: 0.3s;
+    animation: move 2s infinite;
+}
+
+@keyframes move{
+    0% {
+        left: 23%;
+      }
+      50% {
+        left: 22%;
+      }
+      75% {
+        left: 23%;
+      }
+
+      100%{
+        left: 23%
+      }
+}
+
+/* Página "Profissional" */
+main, #cont{
+width: 100vw;
+height: 100vh;
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    left:18%;
+    bottom: 15%;
+    background-color: #7300ffc0;
+    width: 65%;
+    height: 65%; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal > h1{
+    font-size: 2vw;
+    position: absolute;
+    top:11%;
+    right: 30%;
+}
+
+.modal > span{
+    position: absolute;
+    top:25%;
+    right: 33.5%;
+    font-weight: normal;
+
+}
+
+.modal > p{
+    width: 40%;
+    font-size: 1vw;
+    position: absolute;
+    top:35%;
+    right: 12%;
+}
+
+.modal > img{
+    position: absolute;
+    top:16%;
+    left:5%;
+}
+
+.modal > a:nth-of-type(2){
+    width: 15%;
+    position: absolute;
+    top:80%;
+    right: 37%;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+
+.close{
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 3vw;
+    position: absolute;
+    right:2%;
+}
+
+
+footer{
+    position: absolute;
+    bottom:0;
+    left: 2%;
+}
+
+footer > a, footer > span, header > a, p, span{
+    font-family: 'Courier Prime', monospace;
+}
+
+footer > a:nth-child(1), footer > a:nth-child(2), footer > a:nth-child(3), footer > a:nth-child(4) {
+    display: inline-block;
+    width: 3%;
+    margin: 1% 0.5%;
+}
+
+footer > a:nth-child(5){
+    position: absolute;
+    left: 45%;
+    top:60%;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer > span{
+    position: absolute;
+    right: 2%;
+    top:60%;
+    text-align: center;
+    font-size: 1vw;
+}
+
+ footer > a img{
+     width: 100%;
+     height: auto;
+ }
+
+
+
+ /* Responsividade */
+
+ /* ABOUT ME página */
+ @media only screen and (min-width: 2000px){
+    header > a{
+        font-size: 1vw;
+    }
+    #page1 > main > p:nth-child(3), #page1 > main > p:nth-child(4), #page1 > main > p:nth-child(5){
+        font-size: 1vw;
+    }
+ }
+
+ @media only screen and (max-width: 1439px){
+    #imgHover > img:nth-child(1){
+        top:10%;
+    }
+    
+    #imgHover > img:nth-child(2){
+        top:10%;
+    }
+    
+    #imgHover > img:nth-child(3){
+        top:-10%;
+    }
+    
+    #imgHover > img:nth-child(4){
+        top:50%;
+    } 
+    
+    #imgHover > img:nth-child(5){
+        top:-60px;
+    }
+ }
+
+ @media only screen and (max-width: 1241px){
+    #page1 p:nth-child(1) {
+        font-size: 1.8vw;
+        position: absolute;
+        left: 30%;
+        top: 15%;
+    }
+    #container {
+        height: 4%;
+        top: 18.5%;
+    }
+ }
+ 
+ @media only screen and (max-width: 1100px){
+    #container {
+        height: 3.5%;
+    }
+
+    .BackI{
+        width: 115%;
+    }
+ }
+
+
+ @media only screen and (max-width: 1091px){
+    #page1 p:nth-child(1) {
+        font-size: 1.8vw;
+        position: absolute;
+        left: 30%;
+        top: 18%;
+    }
+    #container {
+        height: 3.5%;
+        top: 21.5%;
+    }
+ }
+
+ @media only screen and (max-width: 1031px){
+    .BackI{
+        width: 130%;
+    }
+ }
+
+ @media only screen and (max-width: 1025px){
+    #container {
+        height: 3.5%;
+        top: 21%;
+    }
+ }
+
+ @media only screen and (max-width: 1008px){    
+    #imgHover > img:nth-child(4){
+        top:45%;
+    } 
+    
+    #imgHover > img:nth-child(5){
+        top:-55px;
+    }
+ }
+
+ @media only screen and (max-width: 966px){    
+    #container {
+        height: 3.5%;
+        top: 20.5%;
+    }
+ }
+ 
+ @media only screen and (max-width: 921px){    
+    #container {
+        height: 3.5%;
+        top: 20.2%;
+    }
+    header > a:nth-of-type(1){
+        margin-right: 4%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        top: 32%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 72%;
+    }
+    
+    #page1 > main > img:nth-child(8){
+        top: 53.2%;
+    }
+ }
+
+ @media only screen and (max-width: 915px){
+    .BackI{
+        width: 150%;
+    }
+ }
+
+ @media only screen and (max-width: 901px){    
+    #container {
+        height: 3.5%;
+        top: 20%;
+    }
+ }
+
+ @media only screen and (max-width: 861px){    
+    #container {
+        height: 3.2%;
+        top: 20%;
+    }
+ }
+ 
+ @media only screen and (max-width: 801px){    
+    #container {
+        height: 3.2%;
+        top: 20%;
+    }
+
+    #page1 p:nth-child(1) {
+        font-size: 1.8vw;
+        position: absolute;
+        left: 30%;
+        top: 20%;
+    }
+    #container {
+        height: 3.5%;
+        top: 22%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        top: 35%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 74%;
+    }
+    
+    #page1 > main > img:nth-child(8){
+        top: 54.5%;
+    }
+ }
+
+ @media only screen and (max-width: 795px){
+    .BackI{
+        width: 170%;
+    }
+ }
+
+ @media only screen and (max-width: 769px){  
+    #imgHover > img:nth-child(4){
+        top:37%;
+    } 
+    
+    #imgHover > img:nth-child(5){
+        top:-41px;
+    }  
+ }
+
+ @media only screen and (max-width: 701px){  
+    #pets{
+        display: none;
+    }
+
+    #page1 > main > img:nth-child(8):hover + #imgHover{
+        display: none;
+    }
+
+    .BackI{
+        width: 190%;
+    }
+ }
+ 
+ @media only screen and (max-width: 670px){  
+    header > h1{
+        font-size:4vw;
+    }
+
+    header > a:nth-of-type(1){
+    margin-right: 6%;
+    }  
+
+    #page1 p:nth-child(1), #rol{
+        font-size: 2.5vw;
+        top: 18.5%;
+    }
+    
+    #container {
+        height: 3.5%;
+        left: 43%;
+        top: 20.5%;
+    }
+
+    #page1 > main > p:nth-child(3){
+        width: 50%;
+        top: 29.3%;
+        left:30%;
+    }
+    
+    #page1 > main > p:nth-child(4){
+        width: 50%;
+        top:52%;
+        left:30%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width: 50%;
+        top: 70%;
+        left:30%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        top: 36%;
+        left:17%;
+        width: 10%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 73%;
+        left: 17%;
+        width: 10%;
+    }
+    
+    #page1 > main > img:nth-child(8){
+        top: 56%;
+        width: 10%;
+        left:81%;
+    }
+
+    footer > a:nth-child(1), footer > a:nth-child(2), footer > a:nth-child(3), footer > a:nth-child(4) {
+        display: inline-block;
+        width: 3%;
+        margin: 1% 1.5%;
+    }
+    
+    footer > span{
+        position: absolute;
+        right: 2%;
+        top:60%;
+        text-align: center;
+        font-size: 2vw;
+    }
+    
+     footer > a img{
+         width: 175%;
+         height: auto;
+     }
+ }
+
+ @media only screen and (max-width: 627px){
+    .BackI{
+        width: 210%;
+    }
+ }
+
+ @media only screen and (max-width: 567px){
+    .BackI{
+        width: 230%;
+    }
+ }
+
+ @media only screen and (max-width: 519px){
+    .BackI{
+        width: 270%;
+    }
+ }
+
+ @media only screen and (max-width: 500px){  
+    header > a:nth-of-type(1){
+    margin-right: 8%;
+    }  
+
+    #page1 p:nth-child(1), #rol{
+        font-size: 3vw;
+        top: 19.5%;
+    }
+    
+    #container {
+        height: 3.5%;
+        left: 46%;
+        top: 21.5%;
+    }
+
+    #page1 > main > p:nth-child(3){
+        width: 50%;
+        top: 28%;
+        left:30%;
+    }
+    
+    #page1 > main > p:nth-child(4){
+        width: 50%;
+        top:52%;
+        left:30%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width: 50%;
+        top: 73%;
+        left:30%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 78%;
+        left: 17%;
+        width: 10%;
+    }
+
+    footer > a:nth-child(1), footer > a:nth-child(2), footer > a:nth-child(3), footer > a:nth-child(4) {
+        display: inline-block;
+        width: 3%;
+        margin: 1% 1.5%;
+    }
+    
+    footer > span{
+        position: absolute;
+        right: 2%;
+        top:60%;
+        text-align: center;
+        font-size: 2vw;
+    }
+    
+     footer > a img{
+         width: 175%;
+         height: auto;
+     }
+}
+
+@media only screen and (max-width: 453px){  
+
+    @keyframes slide {
+        0% {
+          top: 0;
+        }
+        50% {
+          top: -1.5em;
+        }
+        75% {
+          top: -3em;
+        }
+      }
+     
+    #container {
+        height: 3.5%;
+        left: 46%;
+        top: 21%;
+    }
+
+    #page1 > main > p:nth-child(3){
+        width: 55%;
+    }
+    
+    #page1 > main > p:nth-child(4){
+        width: 55%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width:55%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        width: 15%;
+        left:10%;
+    }
+
+    #page1 > main > img:nth-child(8){
+        width: 12%;
+        left: 85%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        width: 12%;
+        left: 14%;
+    }
+   
+    footer > span{
+        top:55%;
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .BackI{
+        width: 300%;
+    }
+ }
+
+@media only screen and (max-width: 413px){  
+
+    #page1 p:nth-child(1), #rol{
+        font-size: 3.7vw;
+        top: 12%;
+    }
+     
+    #container {
+        height: 3.5%;
+        left: 48%;
+        top: 14%;
+    }
+
+    #page1 > main > p:nth-child(3){
+        width: 50%;
+        top: 20%;
+
+    }
+    
+    #page1 > main > p:nth-child(4){
+        width: 50%;
+        top:48%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width:50%;
+        top:69%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        width: 15%;
+        left:10%;
+        top: 30%;
+    }
+
+    #page1 > main > img:nth-child(8){
+        width: 12%;
+        left: 85%;
+        top: 54%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        width: 12%;
+        left: 14%;
+        top: 75%;
+    }
+   
+    footer > span{
+        top:55%;
+        font-size: 2.5vw;
+    }
+
+    .BackI{
+        width: 310%;
+    }
+}
+
+@media only screen and (max-width: 369px){  
+
+        header > a:nth-of-type(1){
+            margin-right: 10%;
+        }  
+
+        #page1 p:nth-child(1), #rol{
+            font-size: 3.7vw;
+            top: 9%;
+        }
+         
+        #container {
+            height: 3.5%;
+            left: 48%;
+            top: 11.5%;
+        }
+    
+        #page1 > main > p:nth-child(3){
+            width: 50%;
+            top: 17%;
+    
+        }
+        
+        #page1 > main > p:nth-child(4){
+            width: 50%;
+            top:46.5%;
+        }
+        
+        #page1 > main > p:nth-child(5){
+            width:50%;
+            top:69%;
+        }
+    
+        #page1 > main > img:nth-child(6){
+            width: 15%;
+            left:10%;
+            top: 30%;
+        }
+    
+        #page1 > main > img:nth-child(8){
+            width: 12%;
+            left: 85%;
+            top: 54%;
+        }
+        
+        #page1 > main > img:nth-child(7){
+            width: 12%;
+            left: 14%;
+            top: 75%;
+        }
+
+        footer > a:nth-child(1), footer > a:nth-child(2), footer > a:nth-child(3), footer > a:nth-child(4) {
+            display: inline-block;
+            width: 4%;
+            margin: 1% 1.5%;
+        }
+       
+        footer > span{
+            top:55%;
+            font-size: 3vw;
+        }
+}   
+
+@media only screen and (max-width: 337px){  
+
+    header > a:nth-of-type(1){
+        margin-right: 10%;
+    }  
+
+    #page1 p:nth-child(1), #rol{
+        font-size: 3.7vw;
+        top: 8%;
+    }
+     
+    #container {
+        height: 3.5%;
+        left: 48.5%;
+        top: 9.2%;
+    }
+
+    #page1 > main > p:nth-child(3){
+        top: 14%;
+
+    }
+    
+    #page1 > main > p:nth-child(4){
+        width: 50%;
+        top:45%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width:50%;
+        top:68%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        top: 26%;
+    }
+
+    #page1 > main > img:nth-child(8){
+        top: 54%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 75%;
+    }
+}
+
+@media only screen and (max-width: 336px){  
+  
+    #page1 > main > p:nth-child(4){
+        width: 50%;
+        top:49%;
+    }
+    
+    #page1 > main > p:nth-child(5){
+        width:50%;
+        top:72%;
+    }
+
+    #page1 > main > img:nth-child(6){
+        top: 28%;
+    }
+
+    #page1 > main > img:nth-child(8){
+        top: 56%;
+    }
+    
+    #page1 > main > img:nth-child(7){
+        top: 80%;
+    }
+}
